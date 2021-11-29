@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EhentaiSpider.Entities
+﻿namespace EhentaiSpider.Entities
 {
     /// <summary>
     /// 漫画标签
@@ -14,17 +8,17 @@ namespace EhentaiSpider.Entities
         /// <summary>
         /// 标签大类
         /// </summary>
-        public string TagMainCategory { get; set; }
+        public string TagMainCategory { get; set; } = string.Empty;
 
         /// <summary>
         /// 标签分类
         /// </summary>
-        public string TagCategory { get; set; }
+        public string TagCategory { get; set; } = string.Empty;
 
         /// <summary>
         /// 从页面上直接抓取的名字
         /// </summary>
-        public string TagHtmlShowName { get; set; }
+        public string TagHtmlShowName { get; set; } = string.Empty;
 
         /// <summary>
         /// 标签完全标题

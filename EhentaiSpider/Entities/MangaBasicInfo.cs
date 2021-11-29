@@ -1,9 +1,4 @@
 ﻿using EhentaiSpider.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EhentaiSpider.Entities
 {
@@ -15,22 +10,22 @@ namespace EhentaiSpider.Entities
         /// <summary>
         /// ID
         /// </summary>
-        public string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
 
         /// <summary>
         /// 标题
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; set; } = string.Empty;
 
         /// <summary>
         /// 封面图地址
         /// </summary>
-        public string CoverImgSrc { get; set; }
+        public string CoverImgSrc { get; set; } = string.Empty;
 
         /// <summary>
         /// 上传者
         /// </summary>
-        public Uploader Uploader { get; set; }
+        public Uploader? Uploader { get; set; }
 
         /// <summary>
         /// 上传时间
@@ -40,7 +35,7 @@ namespace EhentaiSpider.Entities
         /// <summary>
         /// 标签
         /// </summary>
-        public MangaTag[] Tags { get; set; }
+        public MangaTag[] Tags { get; set; } = Array.Empty<MangaTag>();
 
         /// <summary>
         /// 评分
