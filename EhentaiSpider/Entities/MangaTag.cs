@@ -28,7 +28,8 @@
         /// <summary>
         /// 标签简写标题
         /// </summary>
-        public string TagTitle => $"{TagMainCategory[0].ToString()}:{TagCategory}";
+        public string TagTitle =>
+            $"{(string.IsNullOrWhiteSpace(TagMainCategory) ? "" : $"{TagMainCategory[0].ToString()}:")}{TagCategory}";
 
         /// <summary>
         /// 是否收藏
