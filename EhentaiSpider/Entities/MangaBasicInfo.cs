@@ -1,4 +1,5 @@
-﻿using EhentaiSpider.Enums;
+﻿using ComponentUtil.Common.Data;
+using EhentaiSpider.Enums;
 
 namespace EhentaiSpider.Entities
 {
@@ -51,6 +52,11 @@ namespace EhentaiSpider.Entities
         /// 分类
         /// </summary>
         public MangaCategory Category { get; set; }
+
+        /// <summary>
+        /// 分类原文
+        /// </summary>
+        public string CategoryText { get; set; }
 
         /// <summary>
         /// 是否有种子

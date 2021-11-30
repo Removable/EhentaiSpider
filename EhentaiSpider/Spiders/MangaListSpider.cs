@@ -51,8 +51,9 @@ namespace EhentaiSpider.Spiders
                 if (gl1c == null || gl2c == null || gl3c == null || gl4c == null)
                     continue;
                 //分类
+                mangaInfo.CategoryText = gl1c.TextContent.Trim();
                 mangaInfo.Category =
-                    EnumHelper.GetEnumValueByDescription<MangaCategory>(gl1c.TextContent.Trim());
+                    EnumHelper.GetEnumValueByDescription<MangaCategory>(mangaInfo.CategoryText);
                 //ID
                 mangaInfo.Id = gl2c.QuerySelectorAll("div")[0].Attributes["id"]?.Value[2..];
                 //封面图
