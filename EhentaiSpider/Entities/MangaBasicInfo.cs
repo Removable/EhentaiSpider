@@ -10,7 +10,7 @@ namespace EhentaiSpider.Entities
         /// <summary>
         /// ID
         /// </summary>
-        public string Id { get; set; } = string.Empty;
+        public string? Id { get; set; } = string.Empty;
 
         /// <summary>
         /// 标题
@@ -20,7 +20,7 @@ namespace EhentaiSpider.Entities
         /// <summary>
         /// 封面图地址
         /// </summary>
-        public string CoverImgSrc { get; set; } = string.Empty;
+        public string? CoverImgSrc { get; set; }
 
         /// <summary>
         /// 上传者
@@ -56,5 +56,10 @@ namespace EhentaiSpider.Entities
         /// 是否有种子
         /// </summary>
         public bool HasTorrent { get; set; }
+        
+        /// <summary>
+        /// 种子下载地址
+        /// </summary>
+        public string? TorrentDownloadAddress { get; set; }
     }
 }
