@@ -11,7 +11,7 @@ namespace EhentaiSpider.Spiders
     /// </summary>
     public class MangaListSpider
     {
-        public static async Task<MangaBasicInfo[]> GetPopularGallery()
+        public static async Task<GalleryResult> GetPopularGallery()
         {
             var url = "https://e-hentai.org/popular";
             var document = await CommonMethod.LoadDocumentAsync(url);
@@ -24,7 +24,7 @@ namespace EhentaiSpider.Spiders
         /// </summary>
         /// <param name="galleryPage"></param>
         /// <exception cref="Exception"></exception>
-        private static MangaBasicInfo[] ResolveDefaultGallery(IDocument galleryPage)
+        private static GalleryResult ResolveDefaultGallery(IDocument galleryPage)
         {
             //找到所需table下的每一行
             var trs = galleryPage.QuerySelectorAll(".itg.gltc>tbody>tr").ToArray();
@@ -142,7 +142,14 @@ namespace EhentaiSpider.Spiders
                 mangaList.Add(mangaInfo);
             }
 
-            return mangaList.ToArray();
+            var galleryResult = new GalleryResult
+            {
+                CurrentPage = 1,
+                MaxPageNum = 1,
+                MangaBasicInfos = mangaList.ToArray(),
+            };
+
+            return galleryResult;
         }
     }
 }

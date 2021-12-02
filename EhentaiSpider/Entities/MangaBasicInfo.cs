@@ -56,7 +56,7 @@ namespace EhentaiSpider.Entities
         /// <summary>
         /// 分类原文
         /// </summary>
-        public string CategoryText { get; set; }
+        public string CategoryText { get; set; } = string.Empty;
 
         /// <summary>
         /// 是否有种子

@@ -7,24 +7,12 @@ using AngleSharp.Io;
 
 namespace EhentaiSpider.Spiders
 {
-    public class CommonMethod
+    internal class CommonMethod
     {
-        public static async Task<IDocument> LoadDocumentAsync(string url)
+        internal static async Task<IDocument> LoadDocumentAsync(string url)
         {
 #if !DEBUG
-            return await GetFromUrl(url);
-#else
-            var path = @"D:\EhentaiSource\Ehentai-html.html";
-            var str = await File.ReadAllTextAsync(path);
-            var parser = new HtmlParser();
-            return await parser.ParseDocumentAsync(str, CancellationToken.None);
-#endif
-
-            #region LocalFunction
-
-            static async Task<IDocument> GetFromUrl(string url)
-            {
-                var headers = new List<KeyValuePair<string, string>>
+            var headers = new List<KeyValuePair<string, string>>
                 {
                     new("user-agent",
                         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36 Edg/96.0.1054.34"),
@@ -46,9 +34,12 @@ namespace EhentaiSpider.Spiders
                 //根据虚拟请求/响应模式创建文档
                 var document = await context.OpenAsync(url);
                 return document;
-            }
-
-            #endregion
+#else
+            var path = @"D:\EhentaiSource\Ehentai-html.html";
+            var str = await File.ReadAllTextAsync(path);
+            var parser = new HtmlParser();
+            return await parser.ParseDocumentAsync(str, CancellationToken.None);
+#endif
         }
     }
 }
