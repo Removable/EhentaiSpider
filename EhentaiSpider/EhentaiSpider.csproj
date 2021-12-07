@@ -12,6 +12,8 @@
     <Copyright>Removable</Copyright>
     <RepositoryUrl>https://github.com/Removable/EhentaiSpider</RepositoryUrl>
     <Version>0.0.1</Version>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
