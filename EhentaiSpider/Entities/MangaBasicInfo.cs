@@ -24,6 +24,13 @@ namespace EhentaiSpider.Entities
         public string? CoverImgSrc { get; set; }
 
         /// <summary>
+        /// 根据封面图地址获取图片原始文件名
+        /// </summary>
+        public string? ImgFileName => string.IsNullOrWhiteSpace(CoverImgSrc)
+            ? ""
+            : CoverImgSrc[(CoverImgSrc.LastIndexOf(@"/", StringComparison.Ordinal) + 1)..];
+
+        /// <summary>
         /// 上传者
         /// </summary>
         public Uploader? Uploader { get; set; }
