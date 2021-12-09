@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <PackageReference Include="AngleSharp" Version="0.16.1" />
-    <PackageReference Include="ComponentUtil.Common" Version="0.4.2" />
+    <PackageReference Include="ComponentUtil.Common" Version="0.4.3" />
   </ItemGroup>
 
 </Project>
