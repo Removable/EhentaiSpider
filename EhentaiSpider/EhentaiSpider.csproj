@@ -7,11 +7,11 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Removable</Authors>
     <PackageProjectUrl>https://github.com/Removable/EhentaiSpider</PackageProjectUrl>
-    <PackageVersion>0.0.1</PackageVersion>
+    <PackageVersion>0.1.1</PackageVersion>
     <Description>A simple Ehentai.org spider</Description>
     <Copyright>Removable</Copyright>
     <RepositoryUrl>https://github.com/Removable/EhentaiSpider</RepositoryUrl>
-    <Version>0.0.1</Version>
+    <Version>0.1.1</Version>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
