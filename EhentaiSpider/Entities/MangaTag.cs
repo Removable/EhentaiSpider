@@ -21,17 +21,6 @@
         public string TagHtmlShowName { get; set; } = string.Empty;
 
         /// <summary>
-        /// 标签完全标题
-        /// </summary>
-        public string TagFullTitle => $"{TagMainCategory}:{TagCategory}";
-
-        /// <summary>
-        /// 标签简写标题
-        /// </summary>
-        public string TagTitle =>
-            $"{(string.IsNullOrWhiteSpace(TagMainCategory) ? "" : $"{TagMainCategory[0].ToString()}:")}{TagCategory}";
-
-        /// <summary>
         /// 是否收藏
         /// </summary>
         public bool IsFavorite { get; set; }

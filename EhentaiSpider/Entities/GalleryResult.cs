@@ -14,12 +14,12 @@ namespace EhentaiSpider.Entities
         public MangaBasicInfo[] MangaBasicInfos { get; set; } = Array.Empty<MangaBasicInfo>();
 
         /// <summary>
-        /// 最大页数
+        /// 当前画廊一共有多少页
         /// </summary>
         public int MaxPageNum { get; set; }
 
         /// <summary>
-        /// 当前页数
+        /// 当前在第几页
         /// </summary>
         public int CurrentPage { get; set; }
     }
