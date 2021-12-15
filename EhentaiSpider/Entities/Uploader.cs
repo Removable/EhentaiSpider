@@ -3,7 +3,7 @@
     /// <summary>
     /// 上传者
     /// </summary>
-    public class Uploader
+    public partial class Uploader
     {
         /// <summary>
         /// 名称

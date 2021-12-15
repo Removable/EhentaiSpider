@@ -3,7 +3,7 @@
     /// <summary>
     /// 漫画标签
     /// </summary>
-    public class MangaTag
+    public partial class MangaTag
     {
         /// <summary>
         /// 标签大类

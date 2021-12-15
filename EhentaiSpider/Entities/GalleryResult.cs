@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EhentaiSpider.Entities
 {
-    public class GalleryResult
+    public partial class GalleryResult
     {
         /// <summary>
         /// 漫画信息

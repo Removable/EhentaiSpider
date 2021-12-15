@@ -6,7 +6,7 @@ namespace EhentaiSpider.Entities
     /// <summary>
     /// 漫画基本信息
     /// </summary>
-    public class MangaBasicInfo
+    public partial class MangaBasicInfo
     {
         /// <summary>
         /// ID
