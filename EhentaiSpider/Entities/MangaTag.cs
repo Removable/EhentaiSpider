@@ -9,11 +9,21 @@
         /// 标签大类
         /// </summary>
         public string TagMainCategory { get; set; } = string.Empty;
+        
+        /// <summary>
+        /// 标签大类简介（可用于汉化等）
+        /// </summary>
+        public string TagMainCategoryDescription { get; set; } = string.Empty;
 
         /// <summary>
         /// 标签分类
         /// </summary>
         public string TagCategory { get; set; } = string.Empty;
+        
+        /// <summary>
+        /// 标签分类简介（可用于汉化等）
+        /// </summary>
+        public string TagCategoryDescription { get; set; } = string.Empty;
 
         /// <summary>
         /// 从页面上直接抓取的名字
