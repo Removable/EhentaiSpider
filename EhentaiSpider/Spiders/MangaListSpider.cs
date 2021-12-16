@@ -13,7 +13,7 @@ namespace EhentaiSpider.Spiders
     {
         public static async Task<GalleryResult> GetPopularGallery()
         {
-            var url = "https://e-hentai.org/popular";
+            const string url = "https://e-hentai.org/popular";
             var document = await CommonMethod.LoadDocumentAsync(url);
             var popularGallery = ResolveDefaultGallery(document);
             return popularGallery;
@@ -106,6 +106,8 @@ namespace EhentaiSpider.Spiders
                         gl2c.QuerySelector(".gldown")?.Children[0].Attributes["href"]?.Value;
                 }
 
+                //地址
+                mangaInfo.Url = gl3c.QuerySelector("a")?.Attributes["href"]?.Value ?? string.Empty;
                 //漫画标题
                 mangaInfo.Title = gl3c.QuerySelectorAll("a>div")[0].TextContent.Trim() ?? "";
                 //标签组
